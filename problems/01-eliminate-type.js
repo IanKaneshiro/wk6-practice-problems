@@ -55,7 +55,9 @@ on the command line.
 ***********************************************************************/
 
 function eliminateType(arr) {
-  // Your code here
+  return (type) => {
+    return arr.filter((el) => typeof el !== type);
+  };
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/

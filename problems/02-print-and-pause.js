@@ -25,7 +25,16 @@ on the command line.
 ***********************************************************************/
 
 function printAndPause(nums) {
-  // Your code here
+  let n = nums[0];
+  if (nums.length === 1) {
+    console.log(n);
+    return setTimeout(() => {}, n);
+  }
+
+  console.log(n);
+  setTimeout(() => {
+    return printAndPause(nums.slice(1));
+  }, n);
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
